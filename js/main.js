@@ -20,6 +20,38 @@
     $.datepicker.setDefaults($.datepicker.regional['es']);
 });
 $(".fechaev").date();*/
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            navigator.notification.alert(
+    states[networkState],  // message
+    function err(){},         // callback
+    'Tipo de conexión',            // title
+    'OK'                  // buttonName
+);
+
+
+          
+        }
+
+  function onDeviceReady() {
+       
+
+
 var evento;
 
 
@@ -29,7 +61,8 @@ listarregistros(evento);
     });
 
 $(document).ready(function(){
-
+ checkConnection();
+ 
 $('.renviar').click(function(){
 
 var str = $('#rtwitter').val();
@@ -182,10 +215,7 @@ $('#registroadd #rfoto').html('');
 
 navigator.notification.alert(
     'Registro Eliminado',  // message
-    function err(){
-     $.mobile.changePage( "#registrolist", {transition: "none"});
-
-    },         // callback
+    function err(){},         // callback
     'Mensaje',            // title
     'OK'                  // buttonName
 );
@@ -193,40 +223,13 @@ navigator.notification.alert(
  }});
  
 }
+}
 
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        checkConnection();
-    }
-
-        function checkConnection() {
-            var networkState = navigator.connection.type;
-
-            var states = {};
-            states[Connection.UNKNOWN]  = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI]     = 'WiFi connection';
-            states[Connection.CELL_2G]  = 'Cell 2G connection';
-            states[Connection.CELL_3G]  = 'Cell 3G connection';
-            states[Connection.CELL_4G]  = 'Cell 4G connection';
-            states[Connection.CELL]     = 'Cell generic connection';
-            states[Connection.NONE]     = 'No network connection';
-
-            navigator.notification.alert(
-    states[networkState],  // message
-    function err(){},         // callback
-    'Tipo de conexión',            // title
-    'OK'                  // buttonName
-);
 
 
-          
-        }
+
 
 
 
