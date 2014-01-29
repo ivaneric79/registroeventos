@@ -62,7 +62,7 @@ listarregistros(evento);
 
 $(document).ready(function(){
  checkConnection();
- 
+
 $('.renviar').click(function(){
 
 var str = $('#rtwitter').val();
@@ -138,6 +138,12 @@ $.mobile.changePage( "#registrolist", {transition: "none"});
 });
 
 
+
+
+}
+
+
+
 function listarregistros(idevento){
       $('#listadoregistros').html('');
 
@@ -161,9 +167,6 @@ var registros = JSON.parse(respuesta);
 
 
 } 
-
-
-
 
 
 function clickregistro(elem){
@@ -222,7 +225,6 @@ navigator.notification.alert(
 
  }});
  
-}
 }
 
 
