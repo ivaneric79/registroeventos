@@ -23,9 +23,6 @@ $(".fechaev").date();*/
 var evento;
 
 
-
-
-
 $(document).on("pagebeforeshow", '#registrolist', function(event) { 
 listarregistros(evento);
 
@@ -52,28 +49,22 @@ url: 'http://www.jbandala.mx/registrame/registrame.php',
 success: function(respuesta) {
 
     if (respuesta == 1){
-
-
-  navigator.notification.alert(
+            navigator.notification.alert(
     'Registro guardado!',  // message
     function err(){},         // callback
     'Mensaje',            // title
     'OK'                  // buttonName
 );
-
-       
 $('#registroadd input').val('');
 $('#registroadd textarea').val('');
 $('#registroadd #rfoto').html(''); 
 }else{
-
-    navigator.notification.alert(
+      navigator.notification.alert(
     respuesta,  // message
     function err(){},         // callback
     'Mensaje',            // title
     'OK'                  // buttonName
 );
-   
 }
 
 
@@ -164,6 +155,7 @@ var registros = JSON.parse(respuesta);
  $('#retmovil').val(val.TMOVIL);
  $('#reemail').val(val.EMAIL);
  $('#recomentarios').val(val.COMENTARIOS);
+ $('#ride').val(val.IDR);
 
 
 
@@ -175,13 +167,34 @@ var registros = JSON.parse(respuesta);
 
 
 
-
-
-    
-
-
-
 }
+
+function clickEliminar(){
+
+    $.ajax({
+        type: "POST",
+        data: {idreg : $('#ride').val()},       
+url: 'http://www.jbandala.mx/registrame/eliminaregistro.php',
+success: function(respuesta) {
+$('#registroadd input').val('');
+$('#registroadd textarea').val('');
+$('#registroadd #rfoto').html('');
+
+navigator.notification.alert(
+    'Registro Eliminado',  // message
+    function err(){
+     $.mobile.changePage( "#registrolist", {transition: "none"});
+
+});
+    },         // callback
+    'Mensaje',            // title
+    'OK'                  // buttonName
+);
+
+ }});
+ 
+}
+
 
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -215,10 +228,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
           
         }
-
-
-
-
 
 
 
