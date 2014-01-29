@@ -1,0 +1,16 @@
+.correos{
+	width: 78%;
+	float: right;
+}
+
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:fixed !important; top: auto !important; width:100%;}
+
+.centertxt{
+	text-align: center;
+}
+
+.logo{
+margin-top: 300px;
+text-align: center;
+}

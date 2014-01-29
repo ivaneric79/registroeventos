@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+       
+            <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+            <link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
+             <link rel="stylesheet" href="css/main.css">
+             
+        <title>Registrame</title>
+    </head>
+    <body>
+
+
+     <div data-role="page" id="page0">
+         <div data-role="content">
+<div class="logo">
+<img src="images/logo.png">    
+
+</div>
+
+         </div>
+             <div data-role="footer">
+             <div data-role="navbar" class="ui-state-persist">
+             <ul>
+                <li><a href="#eventoslist" data-icon="calendar">Eventos</a></li>
+                <li><a href="#" data-icon="gear">Configuración</a></li>
+             </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+
+     </div>   
+
+
+<!--Listado de eventos-->
+     <div data-role="page" id="eventoslist">
+        <div data-theme="a" data-role="header">
+       
+        <h3>
+           Eventos
+        </h3>
+       
+    </div>
+         <div data-role="content">
+
+<ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+    <li><a class="eventorow" id="1" href="#">
+        <h2>Fida Kahlo</h2>
+        </a>
+        <a href="#"  data-position-to="window">Editar</a>
+    </li>
+    
+</ul>
+
+         </div>
+             <div data-role="footer">
+             <div data-role="navbar" class="ui-state-persist">
+             <ul>
+                <li><a href="#eventosadd" data-icon="plus">Eventos</a></li>
+                <li><a href="#page0" data-icon="home">Inicio</a></li>
+             </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+
+     </div>  
+
+
+<!--Registro de eventos-->
+     <div data-role="page" id="eventosadd">
+        <div data-theme="a" data-role="header">
+       
+        <h3>
+           Registro Evento
+        </h3>
+       
+    </div>
+         <div data-role="content">
+            <br>
+
+             <label for="text-6">Nombre:</label>
+             <input name="text-6" id="text-6" value="" placeholder="Nombre" type="text">
+
+             <label for="fecha">Fecha:</label>
+             <input name="fecha" data-role="date" data-inline="false" type="text" class="fechaev">
+
+
+
+
+         </div>
+             <div data-role="footer">
+             <div data-role="navbar" class="ui-state-persist">
+             <ul>
+                <li><a href="#eventoslist" data-icon="plus">Eventos</a></li>
+                <li><a href="#page0" data-icon="home">Inicio</a></li>
+             </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+
+     </div>  
+
+
+     <!--Listado de eventos-->
+     <div data-role="page" id="registrolist">
+        <div data-theme="a" data-role="header">
+       
+        <h3>
+           Frida Kahlo
+        </h3>
+       
+    </div>
+         <div data-role="content">
+
+<ul id="listadoregistros" data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+    <li><a href="#registroedit">
+        <h2>Ivan Eric López</h2>
+        </a>
+        <a href="#registroedit"  data-position-to="window">Editar</a>
+    </li>
+    <li><a href="#registroedit2">
+        <h2>Josue Olazo Bandala</h2>
+        </a>
+        <a href="#registroedit2"  data-position-to="window">Editar</a>
+    </li>
+   
+</ul>
+
+         </div>
+             <div data-role="footer">
+             <div data-role="navbar" class="ui-state-persist">
+             <ul>
+                <li><a href="#registroadd" data-icon="plus">Registro</a></li>
+                <li><a href="#eventoslist" data-icon="calendar">Eventos</a></li>
+             </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+
+     </div>  
+
+
+
+
+
+
+
+
+      <div data-role="page" id="registroadd">
+<div data-theme="a" data-role="header">
+       
+        <h3>
+           Registrame
+        </h3>
+       
+    </div>
+    <div data-role="content">
+    <div class="rform">  
+<div class="ui-field-contain">
+    <label for="textinput-1">NOMBRE</label>
+    <input name="textinput-1" id="rnombre" placeholder="Nombre" value="" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-2">EMPRESA</label>
+    <input name="textinput-2" id="rempresa" placeholder="Empresa" value="" type="text">
+</div>
+
+<div class="ui-field-contain">
+    <label for="textinput-3">TWITTER</label>
+    <input name="textinput-3" id="rtwitter" placeholder="Twitter" value="@" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-5">TELÉFONO OFICINA</label>
+    
+    <input name="textinput-5" id="rtoficina" placeholder="Teléfono" value="" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-6">TELÉFONO MÓVIL</label>
+    
+    <input name="textinput-6" id="rtmovil" placeholder="Móvil" value="" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-4">E-MAIL</label>
+    
+    <input name="textinput-4" id="remail" placeholder="E-Mail" value="" type="text">
+</div>
+
+      
+       <!-- <fieldset data-role="controlgroup"  data-mini="true" class="correos">
+            
+            <input name="radio-choice-b" id="radio-choice-c" value="list" checked="checked" type="radio">
+            <label for="radio-choice-c">Hotmail</label>
+            <input name="radio-choice-b" id="radio-choice-d" value="grid" type="radio">
+            <label for="radio-choice-d">GMail</label>
+            <input name="radio-choice-b" id="radio-choice-e" value="gallery" type="radio">
+            <label for="radio-choice-e">Yahoo</label>
+            <input name="radio-choice-f" id="radio-choice-f" value="otro" type="radio">
+            <label for="radio-choice-f">Otro</label>
+        </fieldset>-->
+
+<div class="ui-field-contain">
+ <label for="textarea-6">COMENTARIOS</label>
+    <textarea cols="40" rows="12" name="textarea-6" id="rcomentarios" placeholder="Cometarios"></textarea>        
+</div>
+<div id="rfoto">
+    
+</div>
+
+</div>
+<form class="centertxt">
+   <!-- <input id="rbfoto" data-icon="camera"   value="Foto" type="button">-->
+ 
+
+   
+</form>
+
+<form class="centertxt">
+    <input data-icon="plus" data-inline="true"  value="Guardar" type="button" class="renviar">
+     <input data-icon="back" data-inline="true"  value="Limpiar" type="button" class="rlimpiar">
+   
+</form>
+
+     
+    </div>
+       <div data-role="footer">
+        <div data-role="navbar" class="ui-state-persist">
+            <ul>
+                <li><a href="#eventoslist" data-icon="calendar">Eventos</a></li>
+                <li><a href="#registrolist" data-icon="bars" class="ui-btn-active">Registros</a></li>
+                <li><a href="#page0" data-icon="gear">Configuración</a></li>
+            </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+
+<div data-role="page" id="registroedit">
+<div data-theme="a" data-role="header">
+       
+        <h3>
+           Registrame
+        </h3>
+       
+    </div>
+    <div data-role="content">
+      
+    <div class="rform">  
+<div class="ui-field-contain">
+    <label for="textinput-1">NOMBRE</label>
+    <input name="textinput-1" id="renombre" placeholder="Nombre" value="" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-2">EMPRESA</label>
+    <input name="textinput-2" id="reempresa" placeholder="Empresa" value="" type="text">
+</div>
+
+<div class="ui-field-contain">
+    <label for="textinput-3">TWITTER</label>
+    <input name="textinput-3" id="retwitter" placeholder="Twitter" value="@" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-5">TELÉFONO OFICINA</label>
+    
+    <input name="textinput-5" id="retoficina" placeholder="Teléfono" value="" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-6">TELÉFONO MÓVIL</label>
+    
+    <input name="textinput-6" id="retmovil" placeholder="Móvil" value="" type="text">
+</div>
+<div class="ui-field-contain">
+    <label for="textinput-4">E-MAIL</label>
+    
+    <input name="textinput-4" id="reemail" placeholder="E-Mail" value="" type="text">
+</div>
+
+      
+       <!-- <fieldset data-role="controlgroup"  data-mini="true" class="correos">
+            
+            <input name="radio-choice-b" id="radio-choice-c" value="list" checked="checked" type="radio">
+            <label for="radio-choice-c">Hotmail</label>
+            <input name="radio-choice-b" id="radio-choice-d" value="grid" type="radio">
+            <label for="radio-choice-d">GMail</label>
+            <input name="radio-choice-b" id="radio-choice-e" value="gallery" type="radio">
+            <label for="radio-choice-e">Yahoo</label>
+            <input name="radio-choice-f" id="radio-choice-f" value="otro" type="radio">
+            <label for="radio-choice-f">Otro</label>
+        </fieldset>-->
+
+<div class="ui-field-contain">
+ <label for="textarea-6">COMENTARIOS</label>
+    <textarea cols="40" rows="12" name="textarea-6" id="recomentarios" placeholder="Cometarios"></textarea>        
+</div>
+<div id="refoto">
+    
+</div>
+
+</div>
+<!--
+<form class="centertxt">
+    <input data-icon="camera"   value="Foto" type="button">
+ 
+
+   
+</form>-->
+
+<form class="centertxt">
+   <!-- <input data-icon="plus" data-inline="true"  value="Guardar" type="button">
+     <input data-icon="back" data-inline="true"  value="Limpiar" type="button">-->
+   
+</form>
+     
+    </div>
+       <div data-role="footer">
+        <div data-role="navbar" class="ui-state-persist">
+            <ul>
+                <li><a href="#eventoslist" data-icon="calendar">Eventos</a></li>
+                <li><a href="#registrolist" data-icon="bars" class="ui-btn-active">Registros</a></li>
+                <li><a href="#page0" data-icon="gear">Configuración</a></li>
+            </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+
+
+
+
+
+
+
+
+   
+<script src="js/jquery-1.10.0.min.js"></script>
+<script src="js/jquery.mobile-1.4.0.min.js"></script>
+<!-- <script src="http://view.jqueryui.com/master/ui/jquery.ui.datepicker.js"></script>-->
+<script src="js/jquery.mobile.datepicker.js"></script>
+<script src="cordova.js"></script>
+
+  <script src="js/main.js"></script>
+    </body>
+</html>
