@@ -185,7 +185,6 @@ navigator.notification.alert(
     function err(){
      $.mobile.changePage( "#registrolist", {transition: "none"});
 
-});
     },         // callback
     'Mensaje',            // title
     'OK'                  // buttonName
