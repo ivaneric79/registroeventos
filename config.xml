@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.jbandala.registrame" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.jbandala.registrame" 
+    version="0.0.1" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:cdv="http://cordova.apache.org/ns/1.0" 
+    xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Registrame</name>
     <description>
        Aplicación simple de registro a eventos.
@@ -25,6 +29,7 @@
     <preference name="webviewbounce" value="true" />
 
 <icon src="images/icon.png" gap:platform="ios" width="57" height="57"/>
-
+<icon src="images/icon-72.png" gap:platform="ios" width="72" height="72"/>
+<icon src="images/icon-722x.png"         gap:platform="ios"        width="144" height="144" />
 
 </widget>
