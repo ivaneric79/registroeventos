@@ -212,9 +212,9 @@ function clickEliminar(){
         data: {idreg : $('#ride').val()},       
 url: 'http://www.jbandala.mx/registrame/eliminaregistro.php',
 success: function(respuesta) {
-$('#registroadd input').val('');
-$('#registroadd textarea').val('');
-$('#registroadd #rfoto').html('');
+$('#registroedit input').val('');
+$('#registroedit textarea').val('');
+$('#registroedit #rfoto').html('');
 
 navigator.notification.alert(
     'Registro Eliminado',  // message
